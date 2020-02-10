@@ -16,3 +16,7 @@ Lembrando que a Go Lang possui imagens oficiais prontas, vale a pena consultar o
 
 3) A imagem de nosso projeto Go precisa ter menos de 2MB =)
 
+LINK ṔARA A IMAGEM GO LANG no DOCKER HUB:
+
+https://hub.docker.com/r/juniorwebap/codeeducation
+
