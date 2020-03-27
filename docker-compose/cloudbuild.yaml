@@ -14,5 +14,4 @@ steps:
     - '.'
     name: 'gcr.io/cloud-builders/docker'
     name: 'gcr.io/$PROJECT_ID/docker-compose'
-    args: ['version']  
-    tags: ['cloud-builders-community']
+    args: ['version']
