@@ -1,18 +1,19 @@
-steps:
-  - id: "Adicionado Docker Compose ao Register"
-    name: "gcr.io/cloud-builders/docker"
-    args: [
-    "build",
-    "--build-arg",
-    "version=1.24.0",
-    "-t",
-    "gcr.io/$PROJECT_ID/docker-compose:latest",
-    "-t",
-    "gcr.io/$PROJECT_ID/docker-compose:1.24.0",
-    "."]
-    name: "gcr.io/$PROJECT_ID/docker-compose"
-    args: ["version"]
-  
+---
+steps: |-
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+    - 'build'
+    - '--build-arg'
+    - 'version=1.24.0'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/docker-compose:latest'
+    - '-t'
+    - 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+    - '.'
+  - name: 'gcr.io/$PROJECT_ID/docker-compose'
+    args: ['version']
+
   images:
-    "gcr.io/$PROJECT_ID/docker-compose:latest"
-    "gcr.io/$PROJECT_ID/docker-compose:1.24.0"
+  - 'gcr.io/$PROJECT_ID/docker-compose:latest'
+  - 'gcr.io/$PROJECT_ID/docker-compose:1.24.0'
+  tags: ['cloud-builders-community']
